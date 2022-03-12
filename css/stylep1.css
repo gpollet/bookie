@@ -1,0 +1,227 @@
+/** CSS communs à plusieurs éléments sur la page **/
+
+html {  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {  box-sizing: inherit; }
+
+body
+{
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+li
+{
+  list-style: none;
+}
+
+#fa_circle, main, .header i:nth-child(n+1)
+{
+  color: #0065FC;
+}
+
+input[type=submit], #filters span
+{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+input[type=submit], #filters span, input[type="text"]
+
+{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/** PC breakpoint **/
+@media screen and (min-width:992px)
+{
+  body
+  {
+    margin: 50px;
+  }
+  nav li:hover
+{
+  color: #0065FC;
+  box-shadow: 0px -86px 0 #0065FC;
+}
+}
+
+/** Tablet breakpoint **/
+@media screen and (min-width:768px) and (max-width:991px)
+{
+  #logo_top
+  {
+    flex-direction: column;
+  }
+  nav
+  {
+    width: 100%;
+  }
+}
+
+/** Phone breakpoint **/
+@media screen and (max-width:767px)
+{
+  #logo_top
+  {
+    flex-direction: column;
+  }
+}
+
+/** Header **/
+
+nav
+{
+  min-width: 30%;
+}
+
+nav ul
+{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+nav li
+{
+  width: 200px;
+}
+
+#link1
+{
+  color: #0065FC;
+}
+
+a:link, a:visited, a:active
+{
+  text-decoration: none;
+  color:black
+}
+
+header, header .find
+{
+  display:flex;
+  flex-direction: column;
+}
+
+#logo_top
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo_top img
+{
+  max-width: 120px;
+}
+
+form
+{
+  display: flex;
+  min-width: 500px;
+  max-width: 30%;
+  height: 50px;
+}
+
+label
+{
+  display: flex;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+input[type="text"]
+{
+  border: #F2F2F2 solid 1px;
+  padding-left: 3%;
+}
+
+input[type=submit]
+{
+  color: white;
+  background-color: #0065FC;
+  border: none;
+  width: 200px;
+}
+
+.header
+{
+  display: flex;
+  align-items: center;
+}
+
+#tri
+{
+  display: flex;
+  width: 830px;
+  justify-content: space-between;
+}
+
+#filters span
+{
+  border: #F2F2F2 solid 2px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  border-left: none;
+  padding-left: 30px;
+}
+
+#filters span:hover
+{
+  background-color: #deebff;
+}
+
+#filters i
+{
+  background-color: #deebff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+#fa_circle
+{
+  border: 1px solid grey;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  padding: 5px;
+  text-align: center;
+}
+
+#tri li
+{
+  position: relative;
+}
+
+li i
+{
+  position: absolute;
+  left: -30px;
+  top: -15px;
+}
+
+li span
+{  
+  padding-right: 15px;
+}
+
+/** Main **/
+  /** Desktop**/
+
+
+
+/** Footer **/
+  /** Desktop**/

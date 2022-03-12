@@ -1,0 +1,396 @@
+/** CSS communs à plusieurs éléments sur la page **/
+
+
+html {  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {  box-sizing: inherit; }
+
+body
+{
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+li
+{
+  list-style: none;
+}
+
+#fa_circle, main, .header i:nth-child(n+1)
+{
+  color: #0065FC;
+}
+
+input[type=submit], #filters span, input[type="text"]
+
+{
+  font-weight: 900;
+  font-size: larger;
+}
+
+br
+{
+  margin-top: 15px;
+}
+
+/** Commun - End **/
+
+/** PC breakpoint **/
+@media screen and (min-width:992px)
+{
+
+  body
+  {
+    margin: 50px;
+  }
+  
+  nav li:hover
+  {
+  color: #0065FC;
+  box-shadow: 0px -86px 0 #0065FC;
+  }
+  
+  nav ul
+  {
+    justify-content: space-evenly;
+  }
+
+  nav li
+{
+  width: 200px;
+}
+
+form
+{
+  min-width: 500px;
+  max-width: 30%;
+}
+
+input[type=submit]
+{
+  width: 200px;
+}
+
+#search
+{
+  display: none;
+}
+
+input[type="text"]
+{
+  border: #F2F2F2 solid 1px;
+}
+
+#tri
+{
+width: 830px;
+justify-content: space-between;
+}
+
+.header
+{
+  align-items: center;
+}
+
+#filters span
+{
+  padding-top: 12px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+#filters span:hover
+{
+  background-color: #deebff;
+}
+
+#filters i
+{
+  left: -30px;
+  top: -15px;
+}
+
+}
+
+/** Desktop - End**
+
+
+/** Tablet & phone common **/
+@media screen and (max-width:991px)
+{
+  body
+  {
+    margin-left: 30px;
+    margin-right: 30px
+  }
+  #logo_top
+  {
+    flex-direction: column;
+  }
+  nav
+  {
+    width: 100%;
+    margin-left: -60px;
+    margin-top: 20px;
+  }
+
+  nav ul
+  {
+    padding: 0px;
+  }
+  
+  #list1
+  {
+    width: 50%;
+    height: 35px;
+    border-bottom: #0065FC solid;
+  }
+
+  #list2
+  {
+    width: 50%;
+  }
+
+  #pcsearch
+  {
+    display: none;
+  }
+
+  input[type="text"]
+{
+  width: 70%;
+  border-left: #F2F2F2 solid 1px;
+  border-top: #F2F2F2 solid 1px;
+  border-bottom: #F2F2F2 solid 1px;
+  border-right: none;
+  font-size: large;
+}
+
+form
+{
+  position: relative;
+}
+
+input[type=submit]
+{
+  position: absolute;
+  left: -18px;
+  width: 50px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  right: 50px;
+}
+
+#search
+{
+  display: inline-block;
+  position: relative;
+}
+
+#search i
+{
+  color: white;
+  right: -14px;
+  top: 15px;
+  position: absolute;
+  font-size: 15px;
+}
+
+.header, #tri
+{
+  flex-wrap: wrap;
+}
+
+#filters ul
+{
+  padding: 0px;
+}
+
+#tri div
+{
+  position: relative;
+  background-color: rebeccapurple;
+}
+
+}
+
+/** Tablet & Phone - End**
+
+/** Tablet breakpoint **/
+@media screen and (min-width:768px) and (max-width:991px)
+{
+
+  form
+{
+  min-width: 500px;
+  max-width: 30%;
+}
+
+h1
+{
+  font-size: 51px;
+}
+
+}
+
+/** Phone breakpoint **/
+@media screen and (max-width:767px)
+{
+  h1
+  {
+    font-size: 21px;
+  }
+
+  body
+  {
+    text-overflow: clip;
+  }
+
+}
+
+/** Header **/
+
+nav
+{
+  min-width: 30%;
+}
+
+nav ul
+{
+  display: flex;
+  text-align: center;
+}
+
+#link1
+{
+  color: #0065FC;
+}
+
+a:link, a:visited, a:active
+{
+  text-decoration: none;
+  color:black
+}
+
+header, header .find
+{
+  display:flex;
+  flex-direction: column;
+}
+
+#logo_top
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo_top img
+{
+  max-width: 120px;
+}
+
+form
+{
+  display: flex;
+  height: 50px;
+}
+
+label
+{
+  display: flex;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+input[type="text"]
+{
+  padding-left: 3%;
+}
+
+input[type=submit]
+{
+  color: white;
+  background-color: #0065FC;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#filters span
+{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header
+{
+  display: flex;
+}
+
+#tri
+{
+  display: flex;
+}
+
+#tri li
+{
+  position: relative;
+}
+
+li span
+{  
+  padding-right: 15px;
+}
+
+#filters span
+{
+  border: #F2F2F2 solid 2px;
+}
+
+#filters i
+{
+  background-color: #deebff;
+  border-radius: 50%;
+}
+
+#tri div
+{
+  display: inline-block;
+}
+
+#fa_circle
+{
+  border: 1px solid grey;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  padding: 5px;
+  text-align: center;
+}
+
+#filters i
+{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+/** Main **/
+  /** Desktop**/
+
+
+
+/** Footer **/
+  /** Desktop**/

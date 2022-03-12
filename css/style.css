@@ -1,0 +1,150 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(236, 236, 236, 0.959);
+}
+
+#menu
+{
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+}
+
+li
+{
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav a, nav a:visited
+{
+    color: black;
+    text-decoration-line: none;
+    font-size: xx-large;
+}
+
+nav a:hover
+{
+    color: rgb(21, 54, 161);
+}
+
+p, h1
+{
+    text-align: center;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav
+{
+    width: 80%;
+    border-bottom: solid;
+}
+
+section
+{
+    width: 40%;
+    
+    border-radius: 25px;
+}
+
+main
+{
+    width: 100%;
+    display: flex;
+}
+
+#col1, #col2
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+#col1 section, #col2 section
+{
+    width: 70%;
+    height: 300px;
+}
+
+section
+{
+    margin: 25px;
+}
+
+section[value="wip"]
+{
+    background-color: rgba(255, 204, 157, 0.719);
+}
+
+section[value="done"]
+{
+    background-color: rgba(204, 240, 204, 0.719);
+}
+
+section[value="todo"]
+{
+    background-color: rgba(255, 179, 174, 0.719);
+}
+
+h2
+{
+    display: inline-block;
+    font-size: xx-large;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+h3
+{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.title
+{
+    display: table;
+    margin: 0px auto;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+#footer
+{
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(206, 204, 204, 0.959);
+}
+
+#name
+{
+    font-size: x-large;
+    padding: 10px;
+}
+
+#github
+{
+    font-size: 35px;
+    color: black;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+#linkedin
+{
+    font-size: 35px;
+    color: #0072b1;
+}
