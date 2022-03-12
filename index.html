@@ -16,17 +16,17 @@
     <header>
         <nav>
             <ul id="menu">
-                <li><a href="index.html">Page d'accueil</a></li>
-                <li><a href="/projet1/projet_1.html">Projet 1</a></li>
+                <div id="home"><li><a href="index.html">Accueil</a></li></div>
+                <div id="topmenu"><li><a href="/projet1/projet_1.html">Projet 1</a></li>
                 <li><a href="index.html">Projet 2</a></li>
-                <li><a href="index.html">Projet 3</a></li>
-                <li><a href="index.html">Projet 4</a></li>
+                <li><a href="index.html">Projet 3</a></li></div>
+                <div id="botmenu"><li><a href="index.html">Projet 4</a></li>
                 <li><a href="index.html">Projet 5</a></li>
-                <li><a href="index.html">Projet 6</a></li>
+                <li><a href="index.html">Projet 6</a></li></div>
             </ul>
         </nav>
     </header>
-        <p>Ce site s'agrémentera progressivement de mes réalisations, notamment mes projets pendant ma formation de développeur web chez OpenClassrooms. Il est donc amené à évoluer régulièrement (notamment le design !).</p>
+        <p id="intro">Ce site s'agrémentera progressivement de mes réalisations, notamment mes projets pendant ma formation de développeur web chez OpenClassrooms. Il est donc amené à évoluer régulièrement (notamment le design !).</p>
         <h1>Présentation des projets</h1>
         <main>
         <div id="col1"><section id="projet1" value="wip">
@@ -35,9 +35,9 @@
             <table>
                 <tr>
                     <th>Étape</th>
-                    <th>Desktop</th>
-                    <th>Tablette</th>
-                    <th>Mobile</th>
+                    <th><span class="resp">Desktop</span><span class="pc"><i class="fas fa-desktop"></i></span></th>
+                    <th><span class="resp">Tablette</span><span class="pc"><i class="fas fa-tablet-alt"></i></span></th>
+                    <th><span class="resp">Mobile</span><span class="pc"><i class="fas fa-mobile-alt"></i></span></th>
                 </tr>
                     <tr>
                         <td>Intégration du header</td>

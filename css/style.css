@@ -3,13 +3,6 @@ body
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#menu
-{
-    display: flex;
-    height: 60px;
-    justify-content: space-around;
-}
-
 li
 {
     list-style-type: none;
@@ -20,7 +13,6 @@ nav a, nav a:visited
 {
     color: black;
     text-decoration-line: none;
-    font-size: xx-large;
 }
 
 nav a:hover
@@ -48,44 +40,8 @@ nav
 section
 {
     width: 40%;
-    
-    border-radius: 25px;
-}
-
-main
-{
-    width: 100%;
-    display: flex;
-}
-
-#col1, #col2
-{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
-}
-
-#col1 section, #col2 section
-{
-    width: 70%;
-    height: 360px;
-}
-
-#col1 i, #col2 i
-{
-    color: green;
-    text-align: center;
-}
-
-table
-{
-    width: 100%;
-}
-
-section
-{
     margin: 25px;
+    border-radius: 25px;
 }
 
 section[value="wip"]
@@ -103,10 +59,32 @@ section[value="todo"]
     background-color: rgba(255, 179, 174, 0.719);
 }
 
+main
+{
+    width: 100%;
+    display: flex;
+}
+
+
+#col1 section, #col2 section
+{
+    width: 70%;
+}
+
+td i
+{
+    color: green;
+    text-align: center;
+}
+
+table
+{
+    width: 100%;
+}
+
 h2
 {
     display: inline-block;
-    font-size: xx-large;
     margin-top: 5px;
     margin-bottom: 0px;
 }
@@ -131,7 +109,6 @@ h3
 {
     display: table;
     margin: 0px auto;
-    font-size: xx-large;
     font-weight: bold;
 }
 
@@ -139,12 +116,10 @@ h3
 
 #footer
 {
-    bottom: 0;
+    bottom: 0px;
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: rgba(206, 204, 204, 0.959);
 }
 
 #github
@@ -164,3 +139,149 @@ footer i, footer span
     font-size: 35px;
     margin-left: 10px;
 }
+
+/** Mobile/tablet start**/
+@media screen and (max-width:1464px)
+{
+
+#intro
+{
+    display: none;
+}
+
+    #menu
+{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+#menu a
+{
+    padding: 5px;
+}
+
+#topmenu, #botmenu
+{
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#topmenu li, #botmenu li
+{
+    padding-top: 20px;
+}
+
+#home
+{
+    min-width: 100%;
+    text-align: center;
+}
+    
+    main
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #col1, #col2
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a, nav a:visited
+{
+    font-size: x-large;
+}
+
+.resp
+{
+    display: none;
+}
+
+h2, .title
+{
+    font-size: large;
+}
+
+h3
+{
+    font-size: medium;
+}
+
+}
+
+/** Mobile/tablet end**/
+
+/** Desktop-only start **/
+
+@media screen and (min-width:1465px)
+{
+
+    #menu
+{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+}
+
+#intro p
+{
+    width: 80%;
+    text-align: center;
+}
+
+.pc
+{
+    display: none;
+}
+
+#topmenu, #botmenu
+{
+    display: flex;
+}
+
+section
+{
+    min-height: 300px;
+}
+
+    #col1, #col2
+{
+    display: flex;
+    align-items: center;
+}
+
+nav a, nav a:visited
+{
+    font-size: xx-large;
+}
+
+#footer
+{
+    position: fixed;
+}
+
+h2
+{
+    font-size: xx-large;
+}
+
+.title
+{
+    font-size: xx-large;
+}
+
+#footer
+{
+    background-color: rgba(240, 237, 237, 0.959);
+}
+
+}
+
+/** Desktop-only end **/
