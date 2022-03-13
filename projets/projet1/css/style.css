@@ -394,6 +394,8 @@ input[type=submit]
 
 #fa_circle
 {
+  top: 8px;
+  position: relative;
   border: 1px solid grey;
   margin-right: 10px;
   display: inline-block;
@@ -402,6 +404,13 @@ input[type=submit]
   height: 29px;
   padding: 5px;
   text-align: center;
+}
+
+#info_icon
+{
+  position: absolute;
+  left: 11px;
+  bottom: 6px;
 }
 
 /** Main **/
