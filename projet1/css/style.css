@@ -18,7 +18,7 @@ li
   list-style: none;
 }
 
-#fa_circle, main, .header i:nth-child(n+1)
+#fa_circle, main, #tri i:nth-child(1)
 {
   color: #0065FC;
 }
@@ -26,13 +26,30 @@ li
 input[type=submit], #filters span, input[type="text"]
 
 {
-  font-weight: 900;
+  font-weight: bold;
   font-size: larger;
 }
 
 br
 {
   margin-top: 15px;
+}
+
+.flex_default
+{
+  display: flex;
+}
+
+.flex_col
+{
+  display: flex;
+  flex-direction: column;
+}
+
+h1
+{
+  font-size: 25px;
+  margin-bottom: 0px;
 }
 
 /** Commun - End **/
@@ -43,34 +60,35 @@ br
 
   body
   {
-    margin: 50px;
+    margin: 35px;
   }
-  
+
+  p
+{
+  font-size: 19px;
+}
+
   nav li:hover
   {
   color: #0065FC;
-  box-shadow: 0px -86px 0 #0065FC;
+  box-shadow: 0px -70px 0 #0065FC;
   }
   
-  nav ul
-  {
-    justify-content: space-evenly;
-  }
-
-  nav li
+nav li
 {
   width: 200px;
 }
 
-form
+input[type="text"]
 {
-  min-width: 500px;
-  max-width: 30%;
+  border: #F2F2F2 solid 1px;
+  padding-left: 10px;
+  width: 280px;
 }
 
 input[type=submit]
 {
-  width: 200px;
+  width: 160px;
 }
 
 #search
@@ -78,38 +96,34 @@ input[type=submit]
   display: none;
 }
 
-input[type="text"]
-{
-  border: #F2F2F2 solid 1px;
-}
-
 #tri
 {
-width: 830px;
-justify-content: space-between;
+  justify-content: space-between;
+  width: 992px;
+  margin: 0;
 }
 
-.header
+#tri span
 {
-  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-#filters span
-{
-  padding-top: 12px;
-  padding-bottom: 10px;
-  padding-left: 30px;
-}
-
-#filters span:hover
+#tri span:hover
 {
   background-color: #deebff;
 }
 
-#filters i
+.filtres
 {
-  left: -30px;
-  top: -15px;
+  width: auto;
+  max-width: 250px;
+}
+
+#filters_t
+{
+  font-size: 22px;
+  width: 100px;
 }
 
 }
@@ -120,19 +134,18 @@ justify-content: space-between;
 /** Tablet & phone common **/
 @media screen and (max-width:991px)
 {
-  body
-  {
-    margin-left: 30px;
-    margin-right: 30px
-  }
-  #logo_top
+
+  
+  #nav_top
   {
     flex-direction: column;
   }
+  
   nav
   {
     width: 100%;
-    margin-left: -60px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 20px;
   }
 
@@ -141,15 +154,20 @@ justify-content: space-between;
     padding: 0px;
   }
   
-  #list1
+  nav li:nth-child(1)
   {
-    width: 50%;
-    height: 35px;
     border-bottom: #0065FC solid;
   }
 
-  #list2
+  nav li:nth-child(2)
   {
+    border-bottom: #F2F2F2 solid;
+    margin-right: 0px;
+  }
+
+  nav li
+  {
+    height: 35px;
     width: 50%;
   }
 
@@ -166,11 +184,14 @@ justify-content: space-between;
   border-bottom: #F2F2F2 solid 1px;
   border-right: none;
   font-size: large;
+  padding-left: 10px;
 }
 
 form
 {
   position: relative;
+  min-width: 375px;
+  max-width: 500px;
 }
 
 input[type=submit]
@@ -186,7 +207,6 @@ input[type=submit]
 
 #search
 {
-  display: inline-block;
   position: relative;
 }
 
@@ -199,20 +219,20 @@ input[type=submit]
   font-size: 15px;
 }
 
-.header, #tri
+#filters
 {
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-#filters ul
+#tri
 {
-  padding: 0px;
+  padding-left: 32px; /** Compense left -32px sur #tri i en alignant avec "Filtres" **/
 }
 
-#tri div
+#filters_t
 {
-  position: relative;
-  background-color: rebeccapurple;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 }
@@ -223,48 +243,75 @@ input[type=submit]
 @media screen and (min-width:768px) and (max-width:991px)
 {
 
-  form
+#margins
 {
-  min-width: 500px;
-  max-width: 30%;
+  margin-left: 30px;
+  margin-right: 30px
 }
 
-h1
+#tri span
 {
-  font-size: 51px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#eco, #family, #love
+{
+  margin-right: 43px;
+}
+
+#tri
+{
+  flex-wrap: wrap;
 }
 
 }
+/** Tablet end **/
 
 /** Phone breakpoint **/
 @media screen and (max-width:767px)
 {
-  h1
+
+  #margins
   {
-    font-size: 21px;
+    margin-left: 15px;
+    margin-right: 15px
   }
 
-  body
-  {
-    text-overflow: clip;
-  }
-
-}
-
-/** Header **/
-
-nav
+  #tri span
 {
-  min-width: 30%;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 19px;
+  padding-right: 10px;
 }
+
+#eco, #family, #love
+{
+  margin-right: 43px;
+}
+
+#tri
+{
+  flex-wrap: wrap;
+  min-width: 375px;
+}
+
+}
+
+/** Common **/
+/** Header **/
 
 nav ul
 {
-  display: flex;
   text-align: center;
 }
 
-#link1
+nav li:nth-child(1)
 {
   color: #0065FC;
 }
@@ -272,47 +319,33 @@ nav ul
 a:link, a:visited, a:active
 {
   text-decoration: none;
-  color:black
+  color:inherit
 }
 
-header, header .find
+#nav_top
 {
-  display:flex;
-  flex-direction: column;
-}
-
-#logo_top
-{
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#logo_top img
+#nav_top img
 {
   max-width: 120px;
 }
 
 form
 {
-  display: flex;
   height: 50px;
 }
 
 label
 {
-  display: flex;
-  width: 50px;
+  width: 60px;
   align-items: center;
   justify-content: center;
   background-color: #F2F2F2;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-}
-
-input[type="text"]
-{
-  padding-left: 3%;
 }
 
 input[type=submit]
@@ -324,20 +357,21 @@ input[type=submit]
   border-bottom-right-radius: 20px;
 }
 
-#filters span
-{
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.header
-{
-  display: flex;
-}
-
 #tri
 {
-  display: flex;
+  align-items: center;
+}
+
+#tri i
+{
+  left: -32px;
+  position:absolute;
+  border-radius: 50%;
+  background-color: #deebff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 15px;
 }
 
 #tri li
@@ -345,25 +379,17 @@ input[type=submit]
   position: relative;
 }
 
-li span
-{  
-  padding-right: 15px;
-}
-
-#filters span
+#tri span
 {
-  border: #F2F2F2 solid 2px;
-}
-
-#filters i
-{
-  background-color: #deebff;
-  border-radius: 50%;
-}
-
-#tri div
-{
-  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: #F2F2F2 solid 2px;
+  border-right: #F2F2F2 solid 2px;
+  border-bottom: #F2F2F2 solid 2px;
 }
 
 #fa_circle
@@ -378,19 +404,7 @@ li span
   text-align: center;
 }
 
-#filters i
-{
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  padding-top: 15px;
-  text-align: center;
-}
-
 /** Main **/
-  /** Desktop**/
-
 
 
 /** Footer **/
-  /** Desktop**/
