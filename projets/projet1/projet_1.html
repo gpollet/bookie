@@ -1,58 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Booki</title>
 </head>
+
 <body>
     <header class="flex_col">
-        <div id="nav_top" class="flex_default">
+        <div id="nav_top">
             <img src="images/logo/Booki@3x.png" alt="Logo Booki">
             <nav>
-                <ul class="flex_default">
+                <ul>
                     <li><a href="#hebergements">Hébergements</a></li>
                     <li><a href="#activites">Activités</a></li>
                 </ul>
             </nav>
         </div>
-<div id="margins">
+        <div id="margins">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
-            <form method="post" action="#.php" class="flex_default">
-                <label for="city" class="flex_default">
+            <form method="post" action="#.php">
+                <label for="city">
                     <i class="fas fa-map-marker-alt"></i>
                 </label>
-                <input onclick="this.select()" type="text" name="city" id="marseille" placeholder="Par ex., Paris" value="Marseille, France" />
-                <input type="submit" value="Rechercher" id="pcsearch" name="city">
+                <input onclick="this.select()" type="text" name="city" id="marseille" placeholder="Par ex., Paris"
+                    value="Marseille, France" />
+                <input type="submit" value="Rechercher" id="pcsearch" name="city" class="bold">
                 <div id="search"><input type="submit" value="" id="mobsearch" name="city"><i class="fas fa-search"></i>
             </form>
         </div>
         <br />
-        <div class="flex_default" id="filters">
-            <h2 id="filters_t" class="flex_default">Filtres</h2>
-                <ul id="tri" class="flex_default">
-                    <li class="flex_default" id="eco"><i class="fas fa-money-bill-wave fa-lg"></i><span>Économique</span></li>
-                   <li class="flex_default" id="family"><i class="fas fa-child fa-lg"></i><span>Familial</span></li>
-                   <li class="flex_default" id="love"><i class="fas fa-heart fa-lg" ></i><span>Romantique</span></li>
-                    <li class="flex_default" id="pets"><i class="fas fa-dog fa-lg"></i><span>Animaux autorisés</span></li>
-                </ul>
+        <div id="filters">
+            <h2 id="filters_t">Filtres</h2>
+            <ul id="tri">
+                <li id="eco"><i class="fas fa-money-bill-wave fa-lg"></i><span class="bold">Économique</span></li>
+                <li id="family"><i class="fas fa-child fa-lg"></i><span class="bold">Familial</span></li>
+                <li id="love"><i class="fas fa-heart fa-lg"></i><span class="bold">Romantique</span></li>
+                <li id="pets"><i class="fas fa-dog fa-lg"></i><span class="bold">Animaux autorisés</span></li>
+            </ul>
         </div>
-        <p><span id="fa_circle"><i class="fas fa-info fa-xs" id="info_icon"></i></span>Plus de 500 logements sont disponibles dans cette ville</p>
+        <p><span id="fa_circle"><i class="fas fa-info fa-xs" id="info_icon"></i></span>Plus de 500 logements sont
+            disponibles dans cette ville</p>
     </header>
     <main>
-        <i class="fas fa-star"></i>
+        <div id="marseille_top">
+            <section id="host">
+                <br />
+                <h2>Hébergements à Marseille</h2>
+                <div class="places">
+                    <a href="#" class="card">
+                        <img class="img_roundtop"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345812/Openclassrooms/Projet1/hebergements/4_small/cannebiere_i1txyw.jpg 750w,
+                                    https://res.cloudinary.com/gpollet/image/upload/v1647345802/Openclassrooms/Projet1/hebergements/3_medium/cannebiere_c6sgih.jpg 1000w,
+                                    https://res.cloudinary.com/gpollet/image/upload/v1647345808/Openclassrooms/Projet1/hebergements/2_large/cannebiere_oalg2b.jpg 2997w,
+                                    https://res.cloudinary.com/gpollet/image/upload/v1647345809/Openclassrooms/Projet1/hebergements/1_xlarge/cannebiere_wlylnl.jpg 5993w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345812/Openclassrooms/Projet1/hebergements/4_small/cannebiere_i1txyw.jpg"
+                            alt="Une chambre avec un lit superposé, deux fenêtres, un ventilateur et un miroir. Murs blancs, parquet au sol, rebord de fenêtre boisé, rideaux bleu-verts">
+
+                        <div class="cards_margin lcards_height">
+                            <h3>Auberge La Cannebière</h3>
+                            <p>Nuit à partir de <span class="bold">25€</span></p>
+                        </div>
+                        <div class="star"> <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="g_star"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="card middle">
+
+                        <img class="img_roundtop"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345813/Openclassrooms/Projet1/hebergements/4_small/port_iemtxr.jpg 684w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345809/Openclassrooms/Projet1/hebergements/3_medium/port_ju8ig6.jpg 1000w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345817/Openclassrooms/Projet1/hebergements/2_large/port_hwntqp.jpg 2736w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345821/Openclassrooms/Projet1/hebergements/1_xlarge/port_tjphpi.jpg 5472w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345813/Openclassrooms/Projet1/hebergements/4_small/port_iemtxr.jpg"
+                            alt="">
+
+                        <div class="cards_margin lcards_height">
+                            <h3>Hôtel du port</h3>
+                            <p>Nuit à partir de 52<span class="bold">€</span></p>
+                        </div>
+                        <div class="star"> <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="card">
+                        <img class="img_roundtop"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345812/Openclassrooms/Projet1/hebergements/4_small/mouettes_nzg3l6.jpg 750w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345808/Openclassrooms/Projet1/hebergements/3_medium/mouettes_ieb47g.jpg 1008w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345803/Openclassrooms/Projet1/hebergements/2_large/mouettes_yrrdly.jpg 3000w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345806/Openclassrooms/Projet1/hebergements/1_xlarge/mouettes_dozoqc.jpg 6000w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345812/Openclassrooms/Projet1/hebergements/4_small/mouettes_nzg3l6.jpg"
+                            alt="">
+
+                        <div class="cards_margin lcards_height">
+                            <h3>Hôtel Les Mouettes</h3>
+                            <p>Nuit à partir de 76<span class="bold">€</span></p>
+                        </div>
+                        <div class="star"> <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="g_star"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="places">
+                    <a href="#" class="card">
+                        <img class="img_roundtop"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345813/Openclassrooms/Projet1/hebergements/4_small/mer_ygsztl.jpg 500w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345809/Openclassrooms/Projet1/hebergements/3_medium/mer_ed9etx.jpg 1368w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345805/Openclassrooms/Projet1/hebergements/2_large/mer_mxjvdz.jpg 2000w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345806/Openclassrooms/Projet1/hebergements/1_xlarge/mer_a8x7kl.jpg 4000w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345813/Openclassrooms/Projet1/hebergements/4_small/mer_ygsztl.jpg"
+                            alt="">
+
+                        <div class="cards_margin lcards_height">
+                            <h3>Hôtel de la mer</h3>
+                            <p>Nuit à partir de 46<span class="bold">€</span></p>
+                        </div>
+                        <div class="star"> <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="g_star"></i>
+                            <i class="fas fa-star" id="g_star"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="card middle">
+                        <img class="img_roundtop"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647446462/Openclassrooms/Projet1/hebergements/4_small/panier_rywp03.jpg 600w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345807/Openclassrooms/Projet1/hebergements/3_medium/panier_nsm5sk.jpg 1500w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345804/Openclassrooms/Projet1/hebergements/2_large/panier_h6sroz.jpg 2606w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345803/Openclassrooms/Projet1/hebergements/1_xlarge/panier_pf4hgp.jpg 5212w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647446462/Openclassrooms/Projet1/hebergements/4_small/panier_rywp03.jpg"
+                            alt="">
+
+                        <div class="cards_margin lcards_height">
+                            <h3>Auberge Le Panier</h3>
+                            <p>Nuit à partir de <span class="bold">23€</span></p>
+                        </div>
+                        <div class="star"> <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="g_star"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="card">
+
+                        <img class="img_roundtop"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345810/Openclassrooms/Projet1/hebergements/4_small/amina_vqmeau.jpg 486w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345802/Openclassrooms/Projet1/hebergements/3_medium/amina_oswbnv.jpg 972w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345818/Openclassrooms/Projet1/hebergements/2_large/amina_jucpky.jpg 1944w,
+                                https://res.cloudinary.com/gpollet/image/upload/v1647345810/Openclassrooms/Projet1/hebergements/1_xlarge/amina_mplvd0.jpg 3888w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345810/Openclassrooms/Projet1/hebergements/4_small/amina_vqmeau.jpg"
+                            alt="">
+
+                        <div class="cards_margin lcards_height">
+                            <h3>Hôtel chez Amina</h3>
+                            <p>Nuit à partir de 96<span class="bold">€</span></p>
+                        </div>
+                        <div class="star"> <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                            <i class="fas fa-star" id="star"></i>
+                        </div>
+                    </a>
+                </div>
+                <p id="afficher_plus"><a href="#" class="bold">Afficher plus</a></p>
+            </section>
+            <section id="best_host">
+                <br />
+                <h2>Les plus populaires <i class="fas fa-chart-line" id="best_chart"></i></h2>
+                <div class="placesb">
+                    <a href="#" class="cardb">
+                        <img class="img_roundleft"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345814/Openclassrooms/Projet1/hebergements/4_small/soleil_lus2op.jpg 532w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345811/Openclassrooms/Projet1/hebergements/3_medium/soleil_i9s3fw.jpg 1063w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345818/Openclassrooms/Projet1/hebergements/2_large/soleil_btaers.jpg 2125w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345817/Openclassrooms/Projet1/hebergements/1_xlarge/soleil_jhptmc.jpg 4249w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345814/Openclassrooms/Projet1/hebergements/4_small/soleil_lus2op.jpg"
+                            alt="">
+                        <div class="cards_margin width_popular">
+                            <h3>Hôtel Le soleil du matin</h3>
+                            <p>Nuit à partir de 128<span class="bold">€</span></p>
+                            <div class="star bot_position">
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="cardb">
+                        <img class="img_roundleft"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345812/Openclassrooms/Projet1/hebergements/4_small/eau_i74wrj.jpg 504w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345803/Openclassrooms/Projet1/hebergements/3_medium/eau_lwodc6.jpg 1303w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345807/Openclassrooms/Projet1/hebergements/2_large/eau_nkqj4x.jpg 2016w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345820/Openclassrooms/Projet1/hebergements/1_xlarge/eau_tamecb.jpg 4032w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345812/Openclassrooms/Projet1/hebergements/4_small/eau_i74wrj.jpg"
+                            alt="">
+                        <div class="cards_margin  width_popular">
+                            <h3>Au cœur de l'eau
+                                <br />
+                                Chambres d'hôtes
+                            </h3>
+                            <p>Nuit à partir de 71<span class="bold">€</span></p>
+                            </span>
+                            <div class="star bot_position">
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="cardb">
+                        <img class="img_roundleft"
+                            srcset="https://res.cloudinary.com/gpollet/image/upload/v1647345811/Openclassrooms/Projet1/hebergements/4_small/bleu_mco2cb.jpg 500w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345805/Openclassrooms/Projet1/hebergements/3_medium/bleu_h5hdi7.jpg 1000w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345815/Openclassrooms/Projet1/hebergements/2_large/bleu_skbbam.jpg 2000w,
+                            https://res.cloudinary.com/gpollet/image/upload/v1647345825/Openclassrooms/Projet1/hebergements/1_xlarge/bleu_lort9f.jpg 4000w"
+                            src="https://res.cloudinary.com/gpollet/image/upload/v1647345811/Openclassrooms/Projet1/hebergements/4_small/bleu_mco2cb.jpg"
+                            alt="">
+                        <div class="cards_margin  width_popular">
+                            <h3>Hôtel Tout bleu et Blanc</h3>
+                            <p>Nuit à partir de 68<span class="bold">€</span></p>
+                            </span>
+                            <div class="star bot_position">
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="star"></i>
+                                <i class="fas fa-star" id="g_star"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
 
     </footer>
-</div>
+    </div>
 </body>
+
 </html>
