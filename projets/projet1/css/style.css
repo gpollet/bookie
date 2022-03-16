@@ -70,7 +70,9 @@ h1 {
 @media screen and (min-width:992px) {
 
   body {
-    margin: 1.5%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
   }
 
   p {
@@ -78,12 +80,22 @@ h1 {
   }
 
   nav li:hover {
-    color: #0065FC;
-    box-shadow: 0px -70px 0 #0065FC;
+    border-top: #0065FC solid 2px;
   }
 
+  nav {
+    display: flex;
+    height: 100px;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  
   nav li {
     width: 200px;
+    padding-top: 50px;
   }
 
   input[type="text"] {
@@ -427,8 +439,7 @@ main {
   margin-left: 3%;
 }
 
-.lcards_height
-{
+.lcards_height {
   height: 50%;
 }
 
