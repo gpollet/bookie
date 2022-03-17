@@ -1,4 +1,4 @@
-/** CSS communs à plusieurs éléments sur la page **/
+/* #region CSS communs à plusieurs éléments sur la page */
 
 
 html {
@@ -64,9 +64,9 @@ h1 {
   border-bottom-left-radius: 25px;
 }
 
-/** Commun - End **/
+/* #endregion Commun - End */
 
-/** PC breakpoint **/
+/* #region PC breakpoint */
 @media screen and (min-width:992px) {
 
   body {
@@ -151,10 +151,9 @@ h1 {
 
 }
 
-/** Desktop - End**
+/* #endregion Desktop - End*/
 
-
-/** Tablet & phone common **/
+/* #region Tablet & phone common */
 @media screen and (max-width:991px) {
 
 
@@ -267,9 +266,9 @@ h1 {
 
 }
 
-/** Tablet & Phone - End**
+/* #endregion Tablet & Phone - End*/
 
-/** Tablet breakpoint **/
+/* #region Tablet breakpoint */
 @media screen and (min-width:768px) and (max-width:991px) {
 
   #margins {
@@ -284,9 +283,9 @@ h1 {
 
 }
 
-/** Tablet end **/
+/* #endregion Tablet end */
 
-/** Phone breakpoint **/
+/* #region Phone breakpoint */
 @media screen and (max-width:767px) {
 
   #margins {
@@ -305,8 +304,10 @@ h1 {
 
 }
 
-/** Common **/
-/** Header **/
+/* #endregion Phone breakpoint end */
+
+/* #region Common */
+/* #region Header */
 
 nav ul {
   text-align: center;
@@ -400,7 +401,9 @@ input[type=submit] {
   bottom: 6px;
 }
 
-/** Main **/
+/* #endregion */
+
+/* #region Main */
 
 main {
   display: flex;
@@ -515,14 +518,16 @@ main {
   position: absolute;
   bottom: 10px;
 }
+/* #endregion */
 
-/** Utiliser la fonction ORDER pour réorganiser les hébergements entre la version PC et mobile.
-Utiliser flex-wrap pour les faire tenir sur 2 lignes? **/
-
-/** Footer **/
+/* #region Footer */
 
 footer
 {
   display: flex;
   background-color: #F2F2F2 ;
 }
+
+/* #endregion */
+
+/* #endregion*/
