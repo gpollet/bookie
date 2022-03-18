@@ -81,6 +81,7 @@ h1 {
 
   nav li:hover {
     border-top: #0065FC solid 2px;
+    color: #0065FC;
   }
 
   nav {
@@ -201,6 +202,43 @@ h1 {
     object-fit: cover;
   }
 
+  #host, #best_host {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  /* #region Activités desktop */
+
+  #pomegues {
+    height: 230px;
+  }
+
+  #frioul {
+    height: 130px;
+  }
+
+  #garde {
+    height: 170px
+  }
+
+  #longchamp {
+    height: 190px;
+  }
+
+  .shared {
+    justify-content: space-between;
+  }
+
+  .act_card1 img, .act_card3 img {
+    height: 480px;
+  }
+
+  .subact {
+    width: 24%;
+  }
+
+  /* #endregion Activités desktop */
+
 
 }
 
@@ -209,7 +247,6 @@ h1 {
 /* #region Tablet & phone common */
 @media screen and (max-width:991px) {
 
-  /* #region Header */
   #nav_top {
     flex-direction: column;
   }
@@ -323,17 +360,18 @@ h1 {
     order: 2;
   }
 
-  .card, .cardb {
-    margin-bottom: 4%;
-  }
-
   footer {
     flex-direction: column;
   }
 
-  footer li {
-    margin-top: 3%;
-    margin-bottom: 3%;
+  footer h3 {
+    padding-bottom: 10px;
+  }
+
+
+  footer ul {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .cards_margin h3 {
@@ -350,6 +388,19 @@ h1 {
     font-size: 13px;
   }
 
+  #activities {
+    flex-direction: column;
+  }
+
+  .subact {
+    width: 100%;
+  }
+
+  .subact img {
+    height: 150px;
+  }
+
+
 }
 
 /* #endregion Tablet & Phone - End*/
@@ -357,7 +408,7 @@ h1 {
 /* #region Tablet breakpoint */
 @media screen and (min-width:768px) and (max-width:991px) {
 
-  div:not(#nav_top, #filters, #marseille_top, #search, .star, .placesb, .places, .cards_margin) {
+  div:not(#nav_top, #marseille_top, #search, .star, .placesb, .places, .cards_margin, #marseille_bot, .subact, #host, #best_host) {
     margin-left: 30px;
     margin-right: 30px
   }
@@ -373,6 +424,9 @@ h1 {
     min-width: 140px;
     min-height: 140px;
     object-fit: cover;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .cards_margin, #host .star {
@@ -384,6 +438,23 @@ h1 {
     object-fit: cover;
   }
 
+  #info_icon {
+    margin-left: 30px;
+  }
+
+  .card, .cardb, .subact a {
+    margin-bottom: 5%;
+  }
+
+  #activites {
+    margin-left: 30px;
+  }
+
+  footer li {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
 }
 
 /* #endregion Tablet end */
@@ -391,9 +462,11 @@ h1 {
 /* #region Phone breakpoint */
 @media screen and (max-width:767px) {
 
-  div:not(#nav_top, #filters, #marseille_top, #search, .star, .placesb, .places, .cards_margin) {
-    margin-left: 15px;
-    margin-right: 15px
+  div:not(#nav_top, #marseille_top, #search, .star, .placesb, .places, .cards_margin, #marseille_bot, .subact, #host, #best_host) {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   p {
@@ -415,6 +488,9 @@ h1 {
     min-width: 140px;
     min-height: 140px;
     object-fit: cover;
+    padding-left: 1.2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
 
   .cards_margin, #host .star {
@@ -426,7 +502,26 @@ h1 {
     object-fit: cover;
   }
 
+  #activites {
+    margin-left: 15px;
+  }
 
+  #section_activites {
+    margin-bottom: 5%;
+  }
+
+  #info_icon {
+    margin-left: 20px;
+  }
+
+  .card, .cardb, .subact a {
+    margin-bottom: 10%;
+  }
+
+  footer li {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 
 }
 
@@ -538,15 +633,9 @@ main {
   width: 100%;
 }
 
-#best_host {
-  padding-right: 2%;
-}
-
 #host, #best_host {
   display: flex;
   flex-direction: column;
-  padding-left: 2%;
-  padding-right: 2%;
 }
 
 .card {
@@ -608,7 +697,8 @@ main {
 #marseille_bot {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 #activities {
@@ -619,7 +709,6 @@ main {
 .subact {
   display: flex;
   flex-direction: column;
-  width: 24%;
 }
 
 .subact img {
@@ -627,45 +716,16 @@ main {
   object-fit: cover;
 }
 
-.act_card1 img, .act_card3 img
-{
-  height: 480px;
-}
 
-.shared {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-#pomegues
-{
-  height: 230px;
-}
-
-#frioul
-{
-  height: 160px;
-}
-
-#garde, #longchamp
-{
-  height: 200px
-}
-
-.activity_cards
-{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border: solid white 8px;
+.activity_cards {
   border-radius: 30px;
   box-shadow: 0px 3px 5px 0px #dddddd;
-  justify-content: space-between;
-  height: fit-content;
 }
 
-/** Dimensions mobile **/
+#marseille_bot h3 {
+  margin-left: 3%;
+}
 
 /* #region Footer */
 
