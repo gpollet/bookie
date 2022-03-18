@@ -214,7 +214,7 @@ h1 {
   }
 
   #frioul {
-    height: 130px;
+    height: 150px;
   }
 
   #garde {
@@ -231,6 +231,11 @@ h1 {
 
   .act_card1 img, .act_card3 img {
     height: 480px;
+  }
+
+  .act_card1 h3, .act_card3 h3
+  {
+    height: 30px;
   }
 
   .subact {
