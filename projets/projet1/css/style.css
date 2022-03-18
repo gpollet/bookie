@@ -149,7 +149,8 @@ h1 {
   }
 
   .card {
-    width: 30%;
+    width: 31%;
+    min-height: 315px;
   }
 
   .cardb {
@@ -160,7 +161,7 @@ h1 {
   .cardb img {
     height: 190px;
     width: 30%;
-    min-width: 140px;
+    min-width: 120px;
     min-height: 140px;
     object-fit: cover;
   }
