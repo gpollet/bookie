@@ -20,11 +20,11 @@ li {
   list-style: none;
 }
 
-#fa_circle, #star, #tri i:nth-child(1) {
+#fa_circle, .stars_fontsize, #tri i:nth-child(1) {
   color: #0065FC;
 }
 
-#g_star {
+.g_star {
   color: rgb(224, 224, 224);
 }
 
@@ -69,7 +69,7 @@ h1 {
 /* #region PC breakpoint */
 @media screen and (min-width:992px) {
 
-  body {
+  header, main {
     margin-left: 1.5%;
     margin-right: 1.5%;
     margin-bottom: 1.5%;
@@ -346,7 +346,7 @@ h1 {
     margin-bottom: 5px;
   }
 
-  #star, #g_star {
+  .stars_fontsize, .g_star {
     font-size: 13px;
   }
 
@@ -530,6 +530,7 @@ input[type=submit] {
 
 main {
   display: flex;
+  flex-direction: column;
 }
 
 #marseille_top {
@@ -603,6 +604,68 @@ main {
 }
 
 /* #endregion */
+
+#marseille_bot {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+#activities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subact {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+}
+
+.subact img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.act_card1 img, .act_card3 img
+{
+  height: 480px;
+}
+
+.shared {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#pomegues
+{
+  height: 230px;
+}
+
+#frioul
+{
+  height: 160px;
+}
+
+#garde, #longchamp
+{
+  height: 200px
+}
+
+.activity_cards
+{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: solid white 8px;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px 0px #dddddd;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+/** Dimensions mobile **/
 
 /* #region Footer */
 
