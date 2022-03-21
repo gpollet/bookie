@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -17,9 +19,9 @@
 </head>
 
 <body>
-    <header class="flex_col">
-        <div id="nav_top">
-            <img src="images/logo/Booki@3x.png" alt="Logo Booki" id="booki_logo">
+    <header>
+        <div class="nav_top">
+            <img src="images/logo/Booki@3x.png" alt="Logo Booki">
             <nav>
                 <ul>
                     <li><a href="#hebergements">Hébergements</a></li>
@@ -27,41 +29,41 @@
                 </ul>
             </nav>
         </div>
-        <div>
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
-            <form method="post" action="#.php">
-                <label for="marseille">
-                    <i class="fas fa-map-marker-alt"></i>
-                </label>
-                <input onclick="this.select()" type="text" name="city" id="marseille" placeholder="Par ex., Paris"
-                    value="Marseille, France" class="bold" />
-                <input type="submit" value="Rechercher" id="pcsearch" name="city" class="bold">
-                <div id="search"><input type="submit" value="" id="mobsearch" name="city"><i class="fas fa-search"></i>
-                </div>
-            </form>
-        </div>
-        <br />
-        <div id="filters">
-            <h2 id="filters_t">Filtres</h2>
-            <ul id="tri">
-                <li id="eco"><i class="fas fa-money-bill-wave fa-lg"></i><span class="bold">Économique</span></li>
-                <li id="family"><i class="fas fa-child fa-lg"></i><span class="bold">Familial</span></li>
-                <li id="love"><i class="fas fa-heart fa-lg"></i><span class="bold">Romantique</span></li>
-                <li id="pets"><i class="fas fa-dog fa-lg"></i><span class="bold">Animaux autorisés</span></li>
-            </ul>
-        </div>
-        <p id="info_icon"><i class="fas fa-info fa-xs" id="fa_circle"></i>Plus de 500 logements sont
-            disponibles dans cette ville</p>
+        <section class="global-margins">
+            <div>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <form method="post" action="#.php">
+                    <label for="marseille">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </label>
+                    <input onclick="this.select()" type="text" name="city" id="marseille" placeholder="Par ex., Paris"
+                        value="Marseille, France" class="bold">
+                    <input type="submit" value="Rechercher" id="pcsearch" name="city" class="bold">
+                    <div id="mobsearch"><button type="submit" value="" name="city"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div id="filters">
+                <h2>Filtres</h2>
+                <ul id="tri">
+                    <li id="eco"><i class="fas fa-money-bill-wave fa-lg"></i><span class="bold">Économique</span></li>
+                    <li id="family"><i class="fas fa-child fa-lg"></i><span class="bold">Familial</span></li>
+                    <li id="love"><i class="fas fa-heart fa-lg"></i><span class="bold">Romantique</span></li>
+                    <li id="pets"><i class="fas fa-dog fa-lg"></i><span class="bold">Animaux autorisés</span></li>
+                </ul>
+            </div>
+            <p id="info_icon"><i class="fas fa-info fa-xs"></i>Plus de 500 logements sont
+                disponibles dans cette ville</p>
+        </section>
     </header>
     <main>
         <div id="marseille_top">
-            <section id="host">
-                <div>
-                    <br />
-                    <h2 id="hebergements">Hébergements à Marseille</h2>
-                    <div class="places">
-                        <a href="#" class="card">
+            <section id="hebergements">
+                <div class="global-margins">
+                    <h2 class="logements--top-margin">Hébergements à Marseille</h2>
+                    <div class="hebergements__rows">
+                        <a href="#" class="card common_cards">
                             <img class="img_roundtop" srcset="images/hebergements/cannebiere_s.jpg 750w,
                                 images/hebergements/cannebiere_m.jpg 1499w,
                                 images/hebergements/cannebiere_l.jpg 2997w,
@@ -80,7 +82,7 @@
                                 <i class="fas fa-star g_star"></i>
                             </div>
                         </a>
-                        <a href="#" class="card middle">
+                        <a href="#" class="card middle common_cards">
 
                             <img class="img_roundtop" srcset="images/hebergements/port_s.jpg 684w,
                                 images/hebergements/port_m.jpg 1000w,
@@ -100,7 +102,7 @@
                                 <i class="fas fa-star stars_fontsize"></i>
                             </div>
                         </a>
-                        <a href="#" class="card">
+                        <a href="#" class="card common_cards">
                             <img class="img_roundtop" srcset="images/hebergements/mouettes_s.jpg 750w,
                                 images/hebergements/mouettes_m.jpg 1008w,
                                 images/hebergements/mouettes_l.jpg 3000w,
@@ -120,8 +122,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="places">
-                        <a href="#" class="card">
+                    <div class="hebergements__rows">
+                        <a href="#" class="card common_cards">
                             <img class="img_roundtop" srcset="images/hebergements/mer_s.jpg 500w,
                                 images/hebergements/mer_m.jpg 1368w,
                                 images/hebergements/mer_l.jpg 2000w,
@@ -140,7 +142,7 @@
                                 <i class="fas fa-star g_star"></i>
                             </div>
                         </a>
-                        <a href="#" class="card middle">
+                        <a href="#" class="card middle common_cards">
                             <img class="img_roundtop" srcset="images/hebergements/panier_s.jpg 600w,
                                 images/hebergements/panier_m.jpg 1500w,
                                 images/hebergements/panier_l.jpg 2606w,
@@ -159,7 +161,7 @@
                                 <i class="fas fa-star g_star"></i>
                             </div>
                         </a>
-                        <a href="#" class="card">
+                        <a href="#" class="card common_cards">
 
                             <img class="img_roundtop" srcset="images/hebergements/amina_s.jpg 486w,
                                 images/hebergements/amina_m.jpg 972w,
@@ -183,77 +185,80 @@
                     <h3 id="afficher_plus"><a href="#" class="bold">Afficher plus</a></h3>
                 </div>
             </section>
-            <section id="best_host">
-                <div>
-                    <br />
-                    <div class="placesb">
-                        <h2>Les plus populaires <i class="fas fa-chart-line" id="best_chart"></i></h2>
-                        <a href="#" class="cardb">
-                            <img class="img_roundleft" srcset="images/hebergements/soleil_s.jpg 532w,
+            <section id="plus-populaires">
+                <div class="global-margins">
+                    <div>
+                        <h2 class="logements--top-margin">Les plus populaires <i class="fas fa-chart-line"
+                                id="best_chart"></i></h2>
+                        <div class="populaires__cards--vertical-align"><a href="#"
+                                class="plus-populaires__cards common_cards">
+                                <img class="img_roundleft" srcset="images/hebergements/soleil_s.jpg 532w,
                                 images/hebergements/soleil_m.jpg 1063w,
                                 images/hebergements/soleil_l.jpg 2125w,
                                 images/hebergements/soleil_xl.jpg 4249w" src="images/hebergements/soleil_s.jpg"
-                                alt="Chambre avec papier-peint vert aux murs, rideau avec motif queue de paon, luminaire en verre en forme d'ananas, radiateur bleu, miroir au plafond et au dessus du lit. Lit simple avec luminaires de part et d'autre."
-                                sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
-                            <div class="cards_margin width_popular">
-                                <h3>Hôtel Le soleil du matin</h3>
-                                <p>Nuit à partir de 128<span class="bold">€</span></p>
-                                <div class="star bot_position">
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
+                                    alt="Chambre avec papier-peint vert aux murs, rideau avec motif queue de paon, luminaire en verre en forme d'ananas, radiateur bleu, miroir au plafond et au dessus du lit. Lit simple avec luminaires de part et d'autre."
+                                    sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
+                                <div class="cards_margin width_popular">
+                                    <h3>Hôtel Le soleil du matin</h3>
+                                    <p>Nuit à partir de 128<span class="bold">€</span></p>
+                                    <div class="star bot_position">
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="#" class="cardb">
-                            <img class="img_roundleft" srcset="images/hebergements/eau_s.jpg 504w,
+                            </a></div>
+                        <div class="populaires__cards--vertical-align"><a href="#"
+                                class="plus-populaires__cards common_cards">
+                                <img class="img_roundleft" srcset="images/hebergements/eau_s.jpg 504w,
                                 images/hebergements/eau_m.jpg 1303w,
                                 images/hebergements/eau_l.jpg 2016w,
                                 images/hebergements/eau_xl.jpg 4032w" src="images/hebergements/eau_s.jpg"
-                                alt="Chambre spacieuse au style industriel. Murs peints en gris, stores et rembardes noirs. Sol tâcheté gris, noir et jaune. Grand lit double avec tête de lit matelassée beige et table de chevet de part et d'autre."
-                                sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
-                            <div class="cards_margin  width_popular">
-                                <h3>Au cœur de l'eau
-                                    <br />
-                                    Chambres d'hôtes
-                                </h3>
-                                <p>Nuit à partir de 71<span class="bold">€</span></p>
-                                <div class="star bot_position">
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star g_star"></i>
+                                    alt="Chambre spacieuse au style industriel. Murs peints en gris, stores et rembardes noirs. Sol tâcheté gris, noir et jaune. Grand lit double avec tête de lit matelassée beige et table de chevet de part et d'autre."
+                                    sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
+                                <div class="cards_margin  width_popular">
+                                    <h3>Au cœur de l'eau
+                                        <br />
+                                        Chambres d'hôtes
+                                    </h3>
+                                    <p>Nuit à partir de 71<span class="bold">€</span></p>
+                                    <div class="star bot_position">
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star g_star"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="#" class="cardb">
-                            <img class="img_roundleft" srcset="images/hebergements/bleu_s.jpg 500w,
-                                images/hebergements/bleu_s.jpg 1000w,
-                                images/hebergements/bleu_s.jpg 2000w,
-                                images/hebergements/bleu_s.jpg 4000w" src="images/hebergements/bleu_s.jpg"
-                                alt="Grande chambre avec murs couleur crème et parquet au sol. Lit double avec tête de lit boisée et table de chevet de part et d'autre."
-                                sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
-                            <div class="cards_margin  width_popular">
-                                <h3>Hôtel Tout bleu et Blanc</h3>
-                                <p>Nuit à partir de 68<span class="bold">€</span></p>
-                                <div class="star bot_position">
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star stars_fontsize"></i>
-                                    <i class="fas fa-star g_star"></i>
+                            </a></div>
+                        <div class="populaires__cards--vertical-align"><a href="#"
+                                class="plus-populaires__cards common_cards">
+                                <img class="img_roundleft" srcset="images/hebergements/bleu_s.jpg 500w,
+                                images/hebergements/bleu_m.jpg 1000w,
+                                images/hebergements/bleu_l.jpg 2000w,
+                                images/hebergements/bleu_xl.jpg 4000w" src="images/hebergements/bleu_s.jpg"
+                                    alt="Grande chambre avec murs couleur crème et parquet au sol. Lit double avec tête de lit boisée et table de chevet de part et d'autre."
+                                    sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
+                                <div class="cards_margin  width_popular">
+                                    <h3>Hôtel Tout bleu et Blanc</h3>
+                                    <p>Nuit à partir de 68<span class="bold">€</span></p>
+                                    <div class="star bot_position">
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star stars_fontsize"></i>
+                                        <i class="fas fa-star g_star"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a></div>
                     </div>
                 </div>
             </section>
         </div>
-        <section id="section_activites">
-            <div id="marseille_bot">
+        <section id="section_activites" class="global-margins">
+            <div class="marseille_bot">
                 <h2 id="activites">Activités à Marseille</h2>
                 <div id="activities">
                     <div class="subact act_card1">
