@@ -380,7 +380,7 @@ main {
 
 /* #region Hébergements à Marseille */
 
-.hebergements {
+#hebergements {
   display: flex;
   flex-direction: column;
 }
@@ -422,12 +422,12 @@ main {
     width: 31%;
     min-height: 315px;
   }
-  .hebergements, .plus-populaires {
+  #hebergements, .plus-populaires {
     background-color: #F2F2F2;
     border-radius: 25px;
   }
 
-  .hebergements {
+  #hebergements {
     flex-grow: 4;
     margin-right: 2.5%;
     padding-left: 2%;
@@ -479,13 +479,13 @@ main {
     flex-direction: column;
   }
 
-  .hebergements {
+  #hebergements {
     order: 2;
   } 
 }
 
 @media screen and (min-width:768px) and (max-width:991px) {
-  .cards_margin, .hebergements .star {
+  .cards_margin, #hebergements .star {
     margin-left: 15px;
   }
 
@@ -532,7 +532,7 @@ main {
 }
 
 @media screen and (max-width:767px) {
-.cards_margin, .hebergements .star {
+.cards_margin, #hebergements .star {
     margin-left: 10px;
   }
 
@@ -600,7 +600,7 @@ main {
   margin-bottom: 2%;
 }
 
-.activities {
+#activities {
   display: flex;
   justify-content: space-between;
 }
@@ -661,7 +661,7 @@ main {
 
 @media screen and (max-width:991px) {
 
-  .activities {
+  #activities {
     flex-direction: column;
   }
 
