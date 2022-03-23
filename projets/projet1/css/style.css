@@ -51,10 +51,6 @@ input[type="text"] {
   font-weight: bold;
 }
 
-form, label {
-  display: flex;
-}
-
 h1 {
   font-size: 25px;
   margin-bottom: 0px;
@@ -158,6 +154,7 @@ nav li:nth-child(1) {
 /* #region Search bar */
 
 form {
+  display: flex;
   height: 50px;
   min-width: 375px;
   max-width: 500px;
@@ -165,6 +162,7 @@ form {
 }
 
 label {
+  display: flex;
   width: 60px;
   align-items: center;
   justify-content: center;
@@ -262,14 +260,14 @@ input[type=submit], button[type=submit] {
   width: 50px;
   height: 50px;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 17px;
 }
 
 .filters-list__btn {
   cursor:pointer;
   position: relative;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding-top: 12px;
@@ -280,9 +278,12 @@ input[type=submit], button[type=submit] {
   border-bottom: #F2F2F2 solid 2px;
 }
 
-.filters-list__btn .filters-list__btn-icons {
+.filters-list__btn i
+{
   font-size: 20px;
 }
+
+
 
 @media screen and (min-width:992px) {
   .filters-flexbox {
@@ -314,7 +315,6 @@ input[type=submit], button[type=submit] {
   }
 
   .filters-list {
-    display: flex;
     flex-wrap: wrap;
   }
 
@@ -322,7 +322,6 @@ input[type=submit], button[type=submit] {
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 15px;
-    margin-right: 43px;
     right: 15px;
   }
 }
@@ -330,12 +329,21 @@ input[type=submit], button[type=submit] {
 @media screen and (min-width:768px) and (max-width:991px) {
   .filters-list__btn {
     padding-right: 30px;
+    margin-right: 2%;
+    margin-left: 30px;
   }
 }
 
 @media screen and (max-width:767px) {
   .filters-list__btn {
-    padding-right: 15px;
+    padding-right: 14px;
+    margin-right: 10%;
+  }
+
+  .filters-list {
+    min-width: 375px;
+    width: 100%;
+    margin-left: 10px;
   }
 }
 
