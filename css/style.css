@@ -1,297 +1,760 @@
-body
-{
-    font-family: Arial, Helvetica, sans-serif;
+/* #region CSS communs à plusieurs éléments sur la page */
+
+
+html {
+  box-sizing: border-box;
 }
 
-li
-{
-    list-style-type: none;
-    padding: 10px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-nav a, nav a:visited
-{
-    color: black;
-    text-decoration-line: none;
+body {
+  background-color: white;
+  font-family: 'Raleway', Arial, sans-serif;
 }
 
-nav a:hover
-{
-    color: rgb(21, 54, 161);
+p {
+  font-size: 16px;
 }
 
-p, h1
-{
-    text-align: center;
+@media screen and (min-width:768px) and (max-width:991px) {
+  .global-margins {
+    margin-left: 30px;
+    margin-right: 30px
+  }
 }
 
-header
-{
-    display: flex;
-    justify-content: space-around;
-}
-
-nav
-{
-    width: 80%;
-    border-bottom: solid;
-}
-
-section
-{
-    width: 40%;
-    margin: 25px;
-    border-radius: 25px;
-}
-
-section[value="wip"]
-{
-    background-color: rgba(255, 204, 157, 0.719);
-}
-
-section[value="done"]
-{
-    background-color: rgba(204, 240, 204, 0.719);
-}
-
-section[value="todo"]
-{
-    background-color: rgba(255, 179, 174, 0.719);
-}
-
-main
-{
-    width: 100%;
-    display: flex;
-}
-
-
-#col1 section, #col2 section
-{
-    width: 70%;
-}
-
-td i
-{
-    color: green;
-    text-align: center;
-}
-
-table
-{
-    width: 100%;
-}
-
-h2
-{
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-
-table td
-{
-    padding: 5px;
-}
-
-table td:nth-child(n+2)
-{
-    text-align: center;
-}
-
-h3
-{
-    text-align: center;
-    margin-top: 0px;
-}
-
-.title
-{
-    display: table;
-    margin: 0px auto;
-    font-weight: bold;
-}
-
-#spin-icon
-{
-    color: black;
-}
-
-/** Footer **/
-
-#footer
-{
-    bottom: 0px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#github
-{
-    color: black;
-    background-color: white;
-    border-radius: 50%;
-}
-
-#linkedin
-{
-    color: #0072b1;
-}
-
-footer i, footer span
-{
-    font-size: 35px;
+@media screen and (max-width:767px) {
+  .global-margins {
     margin-left: 10px;
+    margin-right: 10px
+  }
 }
 
-/** Mobile/tablet start**/
-@media screen and (max-width:1464px)
-{
-
-#intro
-{
-    display: none;
+li {
+  list-style: none;
 }
 
-    #menu
-{
-    display: flex;
+.fa-star {
+  color: #0065FC;
+}
+
+.g_star {
+  color: rgb(224, 224, 224);
+}
+
+input[type="text"] {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: inherit
+}
+
+.img_roundtop {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width:992px) {
+  header, main {
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-bottom: 1.5%;
+}
+}
+
+
+/* #region Nav */
+nav ul {
+  display: flex;
+  text-align: center;
+}
+
+nav li:nth-child(1) {
+  color: #0065FC;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  max-width: 120px;
+}
+
+@media screen and (min-width:992px) {
+  nav li:hover {
+    border-top: #0065FC solid 2px;
+    color: #0065FC;
+  }
+
+  nav ul {
+    margin: 0;
+    height: 100px;
+  }
+
+
+  nav li {
+    width: 200px;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .header {
+    flex-direction: column;
+  }
+
+  nav {
     width: 100%;
-    flex-wrap: wrap;
-    padding-left: 0px;
-}
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+  }
 
-#menu a
-{
-    padding: 5px;
-}
+  nav ul {
+    padding: 0px;
+  }
 
-#topmenu, #botmenu
-{
+  nav li:nth-child(1) {
+    border-bottom: #0065FC solid;
+  }
+
+  nav li:nth-child(2) {
+    border-bottom: #F2F2F2 solid;
+    margin-right: 0px;
+  }
+
+  nav li {
+    height: 35px;
     width: 50%;
-    text-align: center;
-    padding-top: 10px;
+  }
 }
 
-#topmenu li, #botmenu li
-{
-    padding-top: 20px;
+/* #endregion Nav */
+
+/* #region Search bar */
+
+form {
+  display: flex;
+  height: 50px;
+  min-width: 375px;
+  max-width: 500px;
+  position: relative;
 }
 
-#home
-{
-    min-width: 100%;
-    text-align: center;
-}
-    
-    main
-    {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #col1, #col2
-    {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a, nav a:visited
-{
-    font-size: x-large;
+label {
+  display: flex;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-.resp
-{
+input[type="text"] {
+  padding-left: 10px;
+  border: #F2F2F2 solid 1px;
+  outline: none;
+  font-size: 20px;
+}
+
+input[type=submit], button[type=submit] {
+  color: white;
+  background-color: #0065FC;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 20px;
+}
+
+@media screen and (min-width:992px) {
+  input[type="text"] {
+    width: 280px;
+  }
+
+  input[type=submit] {
+    width: 160px;
+    font-weight: bold;
+  }
+
+  #mobsearch {
     display: none;
+  }
 }
 
-h2, .title
-{
-    font-size: large;
-}
-
-h3
-{
-    font-size: medium;
-}
-
-}
-
-/** Mobile/tablet end**/
-
-/** Desktop-only start **/
-
-@media screen and (min-width:1465px)
-{
-
-    #menu
-{
-    display: flex;
-    height: 60px;
-    justify-content: center;
-}
-
-#intro p
-{
-    width: 80%;
-    text-align: center;
-}
-
-.pc
-{
+@media screen and (max-width:991px) {
+  #pcsearch {
     display: none;
+  }
+
+  input[type="text"] {
+    width: 60%;
+  }
+
+  button[type=submit] {
+    position: absolute;
+    left: -18px;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 50px;
+  }
+
+  #mobsearch {
+    position: relative;
+  }
+
+  .fa-search {
+    color: white;
+    right: 17px;
+    top: 17px;
+    position: absolute;
+    font-size: 15px;
+  }
 }
 
-#topmenu, #botmenu
-{
-    display: flex;
+/* #endregion Search bar */
+
+/* #region Filters */
+.filters-flexbox {
+  display: flex;
+  margin-top: 15px;
 }
 
-section
-{
-    min-height: 300px;
+.filters-title {
+  font-size: 22px;
 }
 
-    #col1, #col2
+.filters-list {
+  display: flex;
+}
+
+.filters-list__btn-icons {
+  color: #0065FC;
+  left: -28px;
+  bottom: -1px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #deebff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 17px;
+}
+
+.filters-list__btn {
+  cursor:pointer;
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+  border-top: #F2F2F2 solid 2px;
+  border-right: #F2F2F2 solid 2px;
+  border-bottom: #F2F2F2 solid 2px;
+}
+
+.filters-list__btn i
 {
-    display: flex;
+  font-size: 20px;
+}
+
+
+
+@media screen and (min-width:992px) {
+  .filters-flexbox {
     align-items: center;
+  }
+  
+  .filters-list {
+    justify-content: space-between;
+    width: 992px;
+    margin-left: 1%;
+  }
+
+  .filters-list__btn {
+    padding-right: 25px;
+  }
+
+  .filters-list__btn:hover {
+    background-color: #deebff;
+  }
 }
 
-nav a, nav a:visited
+@media screen and (max-width:991px) {
+  .filters-flexbox {
+    flex-direction: column;
+  }
+
+  .filters-title {
+    margin-bottom: 0;
+  }
+
+  .filters-list {
+    flex-wrap: wrap;
+  }
+
+  .filters-list__btn {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  .filters-list__btn {
+    padding-right: 30px;
+    margin-right: 2%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .filters-list__btn {
+    padding-right: 14px;
+    margin-right: 10%;
+  }
+
+  .filters-list {
+    min-width: 375px;
+    width: 100%;
+    margin-left: 10px;
+  }
+}
+
+/* #endregion Filters */
+
+.nb-logements-dispo
 {
-    font-size: xx-large;
+  display: flex;
+  align-items: center;
+}
+.info-icon__circle {
+  border: 1px solid grey;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  color: #0065FC
 }
 
-#footer
-{
-    position: fixed;
+main {
+  display: flex;
+  flex-direction: column;
 }
 
-h2
-{
-    font-size: xx-large;
+.blocks-logement {
+  display: flex;
+  width: 100%;
 }
 
-.title
-{
-    font-size: xx-large;
+.prices {
+  font-weight: bold;
 }
 
-#footer
-{
-    background-color: rgba(240, 237, 237, 0.959);
+.common_cards {
+  display: flex;
+  background-color: white;
+  border: solid white 8px;
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px 0px #dddddd;
 }
+
+/* #region Hébergements à Marseille */
+
+#hebergements {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.hebergements-card {
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.cards_margin {
+  position: relative;
+}
+
+.logements--top-margin {
+  margin-top: 30px;
+}
+
+.width_popular {
+  width: 70%;
+}
+
+.lcards_height {
+  height: 50%;
+}
+
+#afficher_plus {
+  margin-bottom: 20px;
+}
+
+.hebergements__rows {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width:992px) {
+  .hebergements-card {
+    width: 31%;
+    min-height: 315px;
+  }
+  #hebergements, .plus-populaires {
+    background-color: #F2F2F2;
+    border-radius: 25px;
+  }
+
+  #hebergements {
+    flex-grow: 4;
+    margin-right: 2.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .cards_margin p, .cards_margin h3 {
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+    margin-left: 3%;
+  }
+
+  .hebergements__rows {
+    margin-bottom: 3%;
+  }
+
+  .star {
+    margin-left: 3%;
+  }
+
+  .hebergements-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
 
 }
 
-/** Desktop-only end **/
+@media screen and (max-width:991px) {
+  .blocks-logement {
+    flex-direction: column;
+  }
 
-#w3c_ok
-{
-    text-align: center;
+.cards_margin h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cards_margin p {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .fa-star {
+    font-size: 13px;
+  }
+
+
+.hebergements__rows {
+    flex-direction: column;
+  }
+
+  #hebergements {
+    order: 2;
+  } 
 }
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  .cards_margin, #hebergements .star {
+    margin-left: 15px;
+  }
+
+  .common_cards {
+    margin-bottom: 5%;
+  }
+
+  .hebergements-card img {
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+/* #endregion Hébergements à Marseille */
+
+/* #region Les plus populaires */
+
+.plus-populaires {
+  display: flex;
+  flex-direction: column;
+}
+
+.plus-populaires h2 {
+  position: relative;
+}
+
+.best-chart {
+  position: absolute;
+  right: 10px;
+}
+
+.plus-populaires__cards img {
+  object-fit: cover;
+  width: 30%;
+  min-width: 140px;
+  min-height: 140px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.stars__bot-position {
+  position: absolute;
+  bottom: 10px;
+}
+
+@media screen and (max-width:767px) {
+.cards_margin, #hebergements .star {
+    margin-left: 10px;
+  }
+
+  .hebergements-card img {
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .common_cards {
+    margin-bottom: 10%;
+  }
+  
+}
+
+@media screen and (min-width:992px) {
+  .plus-populaires {
+    flex-grow: 1;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .plus-populaires__cards {
+    margin-bottom: 8%;
+  }
+
+  .plus-populaires__cards img {
+    height: 190px;
+    min-width: 120px;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .plus-populaires {
+    order: 1;
+    background-color: #F2F2F2;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  .plus-populaires__cards img {
+    height: 190px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .plus-populaires__cards img {
+    height: 150px;
+    padding-left: 1.2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+
+/* #endregion Les plus populaires */
+
+/* #region Activités */
+
+.activites-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#activities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subact {
+  display: flex;
+  flex-direction: column;
+}
+
+.subact img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.activity-cards {
+  border-radius: 30px;
+  box-shadow: 0px 3px 5px 0px #dddddd;
+}
+
+.activites-block h3 {
+  margin-left: 3%;
+}
+
+@media screen and (min-width:992px) {
+
+  #pomegues {
+    height: 230px;
+  }
+
+  #frioul {
+    height: 150px;
+  }
+
+  #garde {
+    height: 170px
+  }
+
+  #longchamp {
+    height: 190px;
+  }
+
+  .shared {
+    justify-content: space-between;
+  }
+
+  .act_card1 img, .act_card3 img {
+    height: 480px;
+  }
+
+  .act_card1 h3, .act_card3 h3 {
+    height: 30px;
+  }
+
+  .subact {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width:991px) {
+
+  #activities {
+    flex-direction: column;
+  }
+
+  .subact {
+    width: 100%;
+  }
+
+  .subact img {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  .subact a {
+    margin-bottom: 5%;
+  }
+
+  .activites__title {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width:767px) {
+
+  .activites__title {
+    margin-left: 15px;
+  }
+
+  .subact a {
+    margin-bottom: 10%;
+  }
+}
+
+
+/* #endregion Activités */
+
+
+/* #region Footer */
+
+footer {
+  display: flex;
+  background-color: #F2F2F2;
+}
+
+@media screen and (min-width:992px) {
+  #footer_mid {
+    margin-left: 15%;
+    margin-right: 20%;
+  }
+
+  footer li {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (max-width:991px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer h3 {
+    padding-bottom: 10px;
+  }
+
+
+  footer ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  footer li {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  footer li {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+/* #endregion Footer */

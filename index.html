@@ -1,136 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Guillaume Pollet</title>
+    <title>Booki</title>
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul id="menu">
-                <div id="home"><li><a href="index.html">Accueil</a></li></div>
-                <div id="topmenu"><li><a href="projets/projet1/projet_1.html">Projet 1</a></li>
-                <li><a href="index.html">Projet 2</a></li>
-                <li><a href="index.html">Projet 3</a></li></div>
-                <div id="botmenu"><li><a href="index.html">Projet 4</a></li>
-                <li><a href="index.html">Projet 5</a></li>
-                <li><a href="index.html">Projet 6</a></li></div>
-            </ul>
-        </nav>
+        <div class="header">
+            <img src="./images/logo/Bookib.png" alt="Logo Booki">
+            <nav>
+                <ul>
+                    <li><a href="#hebergements">Hébergements</a></li>
+                    <li><a href="#activities">Activités</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section>
+            <div class="global-margins">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <form method="post" action="#.php">
+                    <label for="marseille">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </label>
+                    <input onclick="this.select()" type="text" name="city" id="marseille" placeholder="Par ex., Paris"
+                        value="Marseille, France">
+                    <input type="submit" value="Rechercher" id="pcsearch" name="city">
+                    <div id="mobsearch"><button type="submit" value="" name="city"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="filters-flexbox">
+                <h2 class="filters-title global-margins">Filtres</h2>
+                <ul class="filters-list">
+                    <li class="filters-list__btn">
+                        <i class="fas fa-money-bill-wave fa-lg filters-list__btn-icons"></i>Économique
+                    </li>
+                    <li class="filters-list__btn">
+                        <i class="fas fa-child fa-lg filters-list__btn-icons"></i>Familial
+                    </li>
+                    <li class="filters-list__btn">
+                        <i class="fas fa-heart fa-lg filters-list__btn-icons"></i>Romantique
+                    </li>
+                    <li class="filters-list__btn">
+                        <i class="fas fa-dog fa-lg filters-list__btn-icons"></i>Animaux autorisés
+                    </li>
+                </ul>
+            </div>
+            <p class="nb-logements-dispo global-margins"><i class="fas fa-info fa-xs info-icon__circle"></i>Plus de 500
+                logements sont
+                disponibles dans cette ville</p>
+        </section>
     </header>
-        <p id="intro">Ce site s'agrémentera progressivement de mes réalisations, notamment mes projets pendant ma formation de développeur web chez OpenClassrooms. Il est donc amené à évoluer régulièrement (notamment le design !).</p>
-        <h1>Présentation des projets</h1>
-        <main>
-        <div id="col1"><section id="projet1" value="done">
-            <span class="title"><h2>Projet 1</h2> - Terminé</span>
-            <h3>Transformer une maquette en site web avec HTML et CSS</h3>
-            <table>
-                <tr>
-                    <th>Étape</th>
-                    <th><span class="resp">Desktop</span><span class="pc"><i class="fas fa-desktop"></i></span></th>
-                    <th><span class="resp">Tablette</span><span class="pc"><i class="fas fa-tablet-alt"></i></span></th>
-                    <th><span class="resp">Mobile</span><span class="pc"><i class="fas fa-mobile-alt"></i></span></th>
-                </tr>
-                    <tr>
-                        <td>Intégration du header</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Intégration de la barre de recherche</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Intégration des filtres</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Intégration de la section "Hébergements"</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Intégration de la section "Les plus populaires"</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Intégration de la section "Activités"</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Intégration du footer</td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                        <td><i class="fas fa-check-circle"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Validation W3C du code HTML et CSS</td>
-                        <td colspan="3"><i class="fas fa-check-circle" id="w3c_ok"></i></td>
-                    </tr>
-                </tr>
-            </table>
+    <main>
+        <div class="blocks-logement">
+            <section id="hebergements">
+                <div class="global-margins">
+                    <h2 class="logements--top-margin">Hébergements à Marseille</h2>
+                    <div class="hebergements__rows">
+                        <a href="#" class="hebergements-card common_cards">
+                            <img class="img_roundtop" srcset="./images/hebergements/cannebiere_s.jpg 750w,
+                                ./images/hebergements/cannebiere_m.jpg 1499w,
+                                ./images/hebergements/cannebiere_l.jpg 2997w,
+                                ./images/hebergements/cannebiere_xl.jpg 5993w" src="./images/hebergements/cannebiere_s.jpg"
+                                alt="Une chambre avec un lit superposé, deux fenêtres, un ventilateur et un miroir. Murs blancs, parquet au sol, rebord de fenêtre boisé, rideaux bleu-verts"
+                                sizes="(min-width:992px) 15.78vw, (min-width:768px) and (max-width:991px) 90.51vw, (max-width:767px) 85.4vw">
+
+                            <div class="cards_margin lcards_height">
+                                <h3>Auberge La Cannebière</h3>
+                                <p>Nuit à partir de <span class="prices"><data value="25">25</data>€</span></p>
+                            </div>
+                            <div class="star"> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star g_star"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="hebergements-card common_cards">
+
+                            <img class="img_roundtop" srcset="./images/hebergements/port_s.jpg 684w,
+                                ./images/hebergements/port_m.jpg 1000w,
+                                ./images/hebergements/port_l.jpg 2736w,
+                                ./images/hebergements/port_xl.jpg 5472w" src="./images/hebergements/port_s.jpg"
+                                alt="Chambre avec deux lits simples, un climatiseur, un miroir et une table de chevet commune. Les murs sont bleus, et le sol est en lino à motifs boisés."
+                                sizes="(min-width:992px) 15.78vw, (min-width:768px) and (max-width:991px) 90.51vw, (max-width:767px) 85.4vw">
+
+                            <div class="cards_margin lcards_height">
+                                <h3>Hôtel du port</h3>
+                                <p>Nuit à partir de <data value="52">52</data><span class="prices">€</span></p>
+                            </div>
+                            <div class="star"> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="hebergements-card common_cards">
+                            <img class="img_roundtop" srcset="./images/hebergements/mouettes_s.jpg 750w,
+                                ./images/hebergements/mouettes_m.jpg 1008w,
+                                ./images/hebergements/mouettes_l.jpg 3000w,
+                                ./images/hebergements/mouettes_xl.jpg 6000w" src="./images/hebergements/mouettes_s.jpg"
+                                alt="Grande chambre avec un lit double, tête de lit en tissu beige. Une table de chevet de part et d'autre. Présence d'un grand placard à vêtements comprenant une planche à repasser et un porte-manteau. Moquette avec motifs entrelacés jaunes et marron clair au sol. Moulures dans les angles du plafond, et papier-peint sur les murs."
+                                sizes="(min-width:992px) 15.78vw, (min-width:768px) and (max-width:991px) 90.51vw, (max-width:767px) 85.4vw">
+
+                            <div class="cards_margin lcards_height">
+                                <h3>Hôtel Les Mouettes</h3>
+                                <p>Nuit à partir de <data value="76">76</data><span class="prices">€</span></p>
+                            </div>
+                            <div class="star"> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star g_star"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hebergements__rows">
+                        <a href="#" class="hebergements-card common_cards">
+                            <img class="img_roundtop" srcset="./images/hebergements/mer_s.jpg 500w,
+                                ./images/hebergements/mer_m.jpg 1368w,
+                                ./images/hebergements/mer_l.jpg 2000w,
+                                ./images/hebergements/mer_xl.jpg 4000w" src="./images/hebergements/mer_s.jpg"
+                                alt="Chambre blanche avec moquette beige au sol et charpente en métal peinte en bleu au plafond. Grande hauteur sous plafond. Lit double avec lampe de chevet de part et d'autre. Fenêtres avec rideaux blancs et bleus. Grande peinture représentant la mer déchainée au dessus de la tête de lit."
+                                sizes="(min-width:992px) 15.78vw, (min-width:768px) and (max-width:991px) 90.51vw, (max-width:767px) 85.4vw">
+
+                            <div class="cards_margin lcards_height">
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de <data value="46">46</data><span class="prices">€</span></p>
+                            </div>
+                            <div class="star"> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star g_star"></i>
+                                <i class="fas fa-star g_star"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="hebergements-card common_cards">
+                            <img class="img_roundtop" srcset="./images/hebergements/panier_s.jpg 600w,
+                                ./images/hebergements/panier_m.jpg 1500w,
+                                ./images/hebergements/panier_l.jpg 2606w,
+                                ./images/hebergements/panier_xl.jpg 5212w" src="./images/hebergements/panier_s.jpg"
+                                alt="Chambre et lits entièrement boisés, avec deux lits superposés et rideau privatif gris."
+                                sizes="(min-width:992px) 15.78vw, (min-width:768px) and (max-width:991px) 90.51vw, (max-width:767px) 85.4vw">
+
+                            <div class="cards_margin lcards_height">
+                                <h3>Auberge Le Panier</h3>
+                                <p>Nuit à partir de <span class="prices"><data value="23">23</data>€</span></p>
+                            </div>
+                            <div class="star"> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star g_star"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="hebergements-card common_cards">
+
+                            <img class="img_roundtop" srcset="./images/hebergements/amina_s.jpg 486w,
+                                ./images/hebergements/amina_m.jpg 972w,
+                                ./images/hebergements/amina_l.jpg 1944w,
+                                ./images/hebergements/amina_xl.jpg 3888w" src="./images/hebergements/amina_s.jpg"
+                                alt="Chambre lumineuse avec murs couleur crème, parquet vitrifié au sol et fenêtre coulissante. Le mobilier comprend deux lits simples, un bureau et une chaise, une télévision."
+                                sizes="(min-width:992px) 15.78vw, (min-width:768px) and (max-width:991px) 90.51vw, (max-width:767px) 85.4vw">
+
+                            <div class="cards_margin lcards_height">
+                                <h3>Hôtel chez Amina</h3>
+                                <p>Nuit à partir de <data value="96">96</data><span class="prices">€</span></p>
+                            </div>
+                            <div class="star"> <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <h3 id="afficher_plus"><a href="#">Afficher plus</a></h3>
+                </div>
+            </section>
+            <section class="plus-populaires">
+                <div class="global-margins">
+                    <div>
+                        <h2 class="logements--top-margin">Les plus populaires <i
+                                class="fas fa-chart-line best-chart"></i></h2>
+                        <div><a href="#" class="plus-populaires__cards common_cards">
+                                <img srcset="./images/hebergements/soleil_s.jpg 532w,
+                                ./images/hebergements/soleil_m.jpg 1063w,
+                                ./images/hebergements/soleil_l.jpg 2125w,
+                                ./images/hebergements/soleil_xl.jpg 4249w" src="./images/hebergements/soleil_s.jpg"
+                                    alt="Chambre avec papier-peint vert aux murs, rideau avec motif queue de paon, luminaire en verre en forme d'ananas, radiateur bleu, miroir au plafond et au dessus du lit. Lit simple avec luminaires de part et d'autre."
+                                    sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
+                                <div class="cards_margin width_popular">
+                                    <h3>Hôtel Le soleil du matin</h3>
+                                    <p>Nuit à partir de <data value="128">128</data><span class="prices">€</span></p>
+                                    <div class="star stars__bot-position">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a href="#" class="plus-populaires__cards common_cards">
+                                <img srcset="./images/hebergements/eau_s.jpg 504w,
+                                ./images/hebergements/eau_m.jpg 1303w,
+                                ./images/hebergements/eau_l.jpg 2016w,
+                                ./images/hebergements/eau_xl.jpg 4032w" src="./images/hebergements/eau_s.jpg"
+                                    alt="Chambre spacieuse au style industriel. Murs peints en gris, stores et rembardes noirs. Sol tâcheté gris, noir et jaune. Grand lit double avec tête de lit matelassée beige et table de chevet de part et d'autre."
+                                    sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
+                                <div class="cards_margin  width_popular">
+                                    <h3>Au cœur de l'eau
+                                        <br />
+                                        Chambres d'hôtes
+                                    </h3>
+                                    <p>Nuit à partir de <data value="71">71</data><span class="prices">€</span></p>
+                                    <div class="star stars__bot-position">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star g_star"></i>
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div><a href="#" class="plus-populaires__cards common_cards">
+                                <img srcset="./images/hebergements/bleu_s.jpg 500w,
+                                ./images/hebergements/bleu_m.jpg 1000w,
+                                ./images/hebergements/bleu_l.jpg 2000w,
+                                ./images/hebergements/bleu_xl.jpg 4000w" src="./images/hebergements/bleu_s.jpg"
+                                    alt="Grande chambre avec murs couleur crème et parquet au sol. Lit double avec tête de lit boisée et table de chevet de part et d'autre."
+                                    sizes="(min-width:992px) 9.03vw, (min-width:768px) and (max-width:991px) 27.01vw, (max-width:767px) 28vw">
+                                <div class="cards_margin  width_popular">
+                                    <h3>Hôtel Tout bleu et Blanc</h3>
+                                    <p>Nuit à partir de <data value="68">68</data><span class="prices">€</span></p>
+                                    <div class="star stars__bot-position">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star g_star"></i>
+                                    </div>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="global-margins">
+            <div class="activites-block">
+                <h2 class="activites__title">Activités à Marseille</h2>
+                <div id="activities">
+                    <div class="subact act_card1">
+                        <a href="#" class="activity-cards">
+                            <img class="img_roundtop" srcset="./images/activites/port-s.jpg 702w,
+                            ./images/activites/port-m.jpg 1404w,
+                            ./images/activites/port-l.jpg 2808w,
+                            ./images/activites/port-xl.jpg 5616w" src="./images/activites/port-s.jpg"
+                                alt="Vue sur le port de Marseille et ses nombreux bâteaux, avec la ville et Notre-Dame-de-la-Garde en arrière plan0"
+                                sizes="(min-width:992px) 23.02vw, (min-width:768px) and (max-width:991px) 92.14vw, (max-width:767px) 88.60vw">
+                            <h3>Vieux port</h3>
+                        </a>
+                    </div>
+                    <div class="subact shared">
+                        <a href="#" class="activity-cards">
+                            <img id="pomegues" class="img_roundtop" srcset="./images/activites/fort-s.jpg 356w,
+                    ./images/activites/fort-m.jpg 711w,
+                 ./images/activites/fort-l.jpg 1422w,
+                    ./images/activites/fort-xl.jpg 2843w" src="./images/activites/fort-s.jpg"
+                                alt="Un ancien fort militaire dans une zone rocailleuse."
+                                sizes="(min-width:992px) 23.02vw, (min-width:768px) and (max-width:991px) 92.14vw, (max-width:767px) 88.60vw">
+                            <h3>Fort de Pomègues</h3>
+                        </a>
+                        <a href="#" class="activity-cards">
+                            <img id="frioul" class="img_roundtop" srcset="./images/activites/frioul-s.jpg 648w,
+                        ./images/activites/frioul-m.jpg 1296w,
+                        ./images/activites/frioul-l.jpg 2592w,
+                        ./images/activites/frioul-xl.jpg 5184w" src="./images/activites/frioul-s.jpg"
+                                alt="Vue sur une muraille qui coupe la mer, et au loin une île calcaire avec un phare. Une jumelle fixe est visible au premier plan."
+                                sizes="(min-width:992px) 23.02vw, (min-width:768px) and (max-width:991px) 92.14vw, (max-width:767px) 88.60vw">
+                            <h3>Îles du Frioul</h3>
+                        </a>
+                    </div>
+                    <div class="subact act_card3">
+                        <a href="#" class="activity-cards">
+                            <img class="img_roundtop" srcset="./images/activites/calanques-s.jpg 606w,
+                        ./images/activites/calanques-m.jpg 1212w,
+                        ./images/activites/calanques-l.jpg 2423w,
+                        ./images/activites/calanques-xl.jpg 4846w" src="./images/activites/calanques-s.jpg"
+                                alt="Photo des calanques de la mediterranée, mêlant roche, végétation et mer sur un grand ciel bleu."
+                                sizes="(min-width:992px) 23.02vw, (min-width:768px) and (max-width:991px) 92.14vw, (max-width:767px) 88.60vw">
+                            <h3>Parc National des Calanques</h3>
+                        </a>
+                    </div>
+                    <div class="subact shared">
+                        <a href="#" class="activity-cards">
+                            <img id="garde" class="img_roundtop" srcset="./images/activites/dame-s.jpg 589w,
+                        ./images/activites/dame-m.jpg 1178w,
+                        ./images/activites/dame-l.jpg 2356w,
+                        ./images/activites/dame-xl.jpg 4712w" src="./images/activites/dame-s.jpg"
+                                alt="Photo avec de Notre-Dame-de-la-Garde surplombant la ville depuis la colline."
+                                sizes="(min-width:992px) 23.02vw, (min-width:768px) and (max-width:991px) 92.14vw, (max-width:767px) 88.60vw">
+                            <h3>Notre-Dame-de-la-Garde</h3>
+                        </a>
+                        <a href="#" class="activity-cards">
+                            <img id="longchamp" class="img_roundtop" srcset="./images/activites/longchamp-s.jpg 504w,
+                        ./images/activites/longchamp-m.jpg 1008w,
+                        ./images/activites/longchamp-l.jpg 2016w,
+                        ./images/activites/longchamp-xl.jpg 4032w" src="./images/activites/longchamp-s.jpg"
+                                alt="Photo du parc Longchamp : une imposante fontaine au premier plan, surplombée par des statues et ceinte par un bâtiment circulaire."
+                                sizes="(min-width:992px) 23.02vw, (min-width:768px) and (max-width:991px) 92.14vw, (max-width:767px) 88.60vw">
+                            <h3>Parc Longchamp</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-        
-        <br />
-        
-        <section id="projet2" value="wip">
-            <span class="title"><h2>Projet 2 - En cours</h2></span>
-            <h3>Dynamiser une page web avec des animations CSS</h3>
-            <i class="fas fa-spinner" id="spin-icon"></i>
-        </section>
-        
-        <br />
-        
-        <section id="projet 3" value="todo">
-            <span class="title"><h2>Projet 3</h2></span>
-            <h3>Optimiser un site web existant</h3>
-        </section></div>
-        
-        <br />
-        
-        <div id="col2"><section id="projet 4" value="todo">
-            <span class="title"><h2>Projet 4</h2></span>
-            <h3>Construire un site e-commerce en JavaScript</h3>
-        </section>
-        
-        <br />
-        
-        <section id="projet 5" value="todo">
-            <span class="title"><h2>Projet 5</h2></span>
-            <h3>Construire une API sécurisée pour une application d'avis gastronomiques</h3>
-        </section>
-        
-        <br />
-        
-        <section id="projet 6" value="todo">
-            <span class="title"><h2>Projet 6</h2></span>
-            <h3>Créer un réseau social d'entreprise</h3>
-        </section></div>
     </main>
     <footer>
-        <div id="footer"><span>Guillaume Pollet</span>
-            <a href="https://linkedin.com/in/guillaumepollet"><i class="fab fa-linkedin" id="linkedin"></i></a>
-            <a href="https://github.com/gpollet"><i class="fab fa-github" id="github"></i></a>
-        </div>
+        <ul>
+            <li>
+                <h3>A propos</h3>
+            </li>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Données et confidentialité</a></li>
+        </ul>
+        <ul id="footer_mid">
+            <li>
+                <h3>Nos hébergements</h3>
+            </li>
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Soumettre votre hôtel</a></li>
+        </ul>
+        <ul>
+            <li>
+                <h3>Assistance</h3>
+            </li>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+        </ul>
     </footer>
-    
 </body>
+
 </html>
